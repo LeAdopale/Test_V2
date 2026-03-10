@@ -111,7 +111,7 @@ def initialiser_graphe_routier(ville_ou_zone="Nantes, France"):
 
     try:
         st.info("Téléchargement de la carte routière...")
-        G = ox.graph_from_address(ville_ou_zone, dist=40000, network_type="drive")
+        G = ox.graph_from_address(ville_ou_zone, dist=30000, network_type="drive")
         G = ox.add_edge_speeds(G)
         G = ox.add_edge_travel_times(G)
 
